@@ -13,6 +13,18 @@ import { FormsModule } from '@angular/forms';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { FlatpickrModule } from 'angularx-flatpickr';
 import { CommonModule } from '@angular/common';
+import { HomeComponent } from './home/home.component';
+import { MaterialDesignModule } from './material-design/material-design.module';
+
+import { AppRoutes } from './app.routes';
+import { EventsComponent } from './events/events.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import { MainNavComponent } from './main-nav/main-nav.component';
+
+import { ZodiacSignsComponent } from './zodiac-signs/zodiac-signs.component';
+
+
+import { ToastModule } from './toast/toast.module';
 
 
 @NgModule({
@@ -20,10 +32,16 @@ import { CommonModule } from '@angular/common';
     AppComponent,
     MainHeaderComponent,
     MainContentComponent,
-    MainFooterComponent
+    MainFooterComponent,
+    HomeComponent,
+    EventsComponent,
+    ZodiacSignsComponent,
+    CalendarComponent,
+    MainNavComponent,
   ],
   imports: [
     BrowserAnimationsModule,
+    AppRoutes,
     CommonModule,
     CalendarCommonModule,
     CalendarMonthModule,
@@ -31,6 +49,8 @@ import { CommonModule } from '@angular/common';
     NgbModalModule,
     BrowserModule,
     FormsModule,
+    ToastModule,
+    MaterialDesignModule,
     FlatpickrModule.forRoot(),
     CalendarModule.forRoot({
       provide: DateAdapter,
